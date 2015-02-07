@@ -1,0 +1,49 @@
+{% block head %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{asset ('bundles/news/styles/style.css')}}"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,700,900,300' rel='stylesheet' type='text/css'/>
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+    {% block container %}
+        <div id="header">
+            {% block header %}
+            <div class="logo">
+                <a href="https://behance.net/nadya_s">Nadya_S
+                </a>
+            </div>
+            <ul class="navigation">
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Work</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <h1 class="htext"> This is my symfony project </h1>
+        </div>
+        {% endblock %}
+        
+        <div id="content">
+        {% block content %}
+        {% endblock %}
+        </div>
+        
+        <div id="footer">
+        {% block footer %}
+            <div class="fcontainer">
+                <div class="social">
+                    <ul>
+                        <li><a href="https://facebook.com/nsydorova" class="facebook">facebook</a></li>
+                        <li><a href="https://twitter.com/Hope_ismycompas" class="twitter">twitter</a></li>
+                        <li><a href="https://behance.net/nadya_s" class="dribble">behance</a></li>
+                    </ul>
+                </div>
+
+                <h3 class="rights">© Nadya_S 2015. All rights reserved</h3>
+            </div>
+        {% endblock %}
+        </div>
+        
+    {% endblock %}
+    </div>
+{% endblock %}

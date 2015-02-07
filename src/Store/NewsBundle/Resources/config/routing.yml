@@ -1,0 +1,15 @@
+news_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: NewsBundle:Default:index }
+    
+news_mainpage:
+    path:     /news
+    defaults: { _controller: NewsBundle:News:index }
+
+news_onepage:
+    path:     /article/{slug}
+    defaults: { _controller: NewsBundle:News:article }
+
+news_onecategory:
+    path:     /category/{slug}
+    defaults: { _controller: NewsBundle:News:onecategory }

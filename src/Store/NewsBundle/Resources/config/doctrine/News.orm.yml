@@ -1,0 +1,27 @@
+Store\NewsBundle\Entity\News:
+    type: entity
+    table: news
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        slug:
+            type: string
+            length: 255
+        title:
+            type: string
+            length: 255
+        content:
+            type: text
+    manyToOne:
+        category:
+            targetEntity: Category
+            inversedBy: articles
+            joinColumn:
+                name: category_id
+                referencedColumnName: id
+
+    lifecycleCallbacks: {  }

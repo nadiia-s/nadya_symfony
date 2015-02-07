@@ -1,0 +1,8 @@
+  {% extends "NewsBundle::layout.html.twig" %}
+    {% block content %}
+        <ol class="news">
+        {% for mynews in news %}
+            <li class="news_item"> <a href="{{path('news_onepage', {'slug':mynews.slug})}}" class="content_title">{{mynews.title}}</a></li>
+        {% endfor %}
+        </ol>
+    {% endblock %}

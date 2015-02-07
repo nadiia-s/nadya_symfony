@@ -1,0 +1,21 @@
+Store\NewsBundle\Entity\Category:
+    type: entity
+    table: category
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        categoryname:
+            type: string
+            length: 255
+        slug:
+            type: string
+            length: 255
+    oneToMany:
+        news:
+            targetEntity: News
+            mappedBy: category
+    lifecycleCallbacks: {  }
